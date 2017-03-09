@@ -1,0 +1,49 @@
+﻿var Leaves= 0;
+var Roots= 2;
+var Trunk = 1;
+var LeafUpgrade = 0;
+var Water = 0;
+var Glucose = 0;
+
+//Root and Water Production
+function AddRoot(number) {
+    Roots = Roots + number;
+    document.getElementById("Roots").innerHTML = Roots;
+};
+function AddWater() {
+    Water += Roots * .5;
+    document.getElementById("Water").innerHTML = Water;
+}
+//Trunk and Leaf and Glucose Production
+function AddLength(number) {
+    var TrunkCost = 10 * Trunk
+    if (Water >= TrunkCost) {
+        Trunk = Trunk + number;
+        Water = Water - TrunkCost
+    }
+    document.getElementById("Trunk").innerHTML = Trunk;
+};
+function AddLeaf() {
+    Leaves += Trunk * 2;
+    document.getElementById("Leaves").innerHTML = Leaves;
+}
+function AddGlucose() {
+    Glucose = Leaves * .75;
+    document.getElementById("Glucose").innerHTML = Glucose;
+}
+/*
+function AutoLeaf() {
+    var LeafUpgradeCost = 100
+    if (Water >= LeafUpgradeCost) {
+        LeafUpgrade = LeafUpgrade + 1;
+        Water = Water - LeafUpgradeCost;
+    }
+    document.getElementById("LeafUpgradeNumber").innerHTML = LeafUpgrade;
+    document.getElementById("LeafUpgradeCost").innerHTML = LeafUpgradeCost;
+}
+*/
+window.setInterval(function() {
+    AddWater();
+    AddLeaf();
+    AddGlucose();
+}, 1000);

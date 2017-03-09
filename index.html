@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="SidebarShit.css" />
+
+    <title>Juniper Tree Stands Alone</title>
+</head>
+<body>
+    <!--Begin navbar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container=fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Juniper Tree Stands Alone</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Options</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--End navbar-->
+    <!--Begin Sidebar-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li><a href="#">The First Tree</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--End Sidebar-->
+    <!--Begin that Good Shit-->
+    <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+             <h1 class="page-header">The First Tree</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container-fluid">
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <h4>Tree Components</h4>
+                <small>This is how much your tree is growing!</small>
+                <p>Leaves: <span id="Leaves"></span></p>
+                <p>Roots: <span id="Roots"></span></p>
+                <p>Trunk Length: <span id="Trunk"></span></p>
+            </div>
+
+            <div class="col-md-5">
+                <h4>Production</h4>
+                <small>This is how much your tree is producing!</small>
+                <p>Water: <span id="Water"></span></p>
+                <p>Glucose: <span id="Glucose"></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container-fluid">
+            <div class="col-md-5 col-md-offset-2">
+                <button onclick="AddRoot(1)">Grow Roots!</button>
+                <p>It costs <span id="RootCost">10</span> glucose to grow a new root!</p><br />
+                <button onclick="AddLength(1)">Grow the Trunk!</button>
+                <p>It costs <span id="TrunkCost">10</span> water to grow your tree taller!</p>
+            </div>
+        </div>
+    </div>
+    <!--End the good shit:(-->
+    <!--Those silly scripts-->
+    <script type="text/javascript" src="Main.js"></script>
+</body>
+</html>
